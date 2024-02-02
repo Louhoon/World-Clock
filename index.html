@@ -5,41 +5,46 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="/src/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet">
 	<title>World Clock</title>
 </head>
 
 <body>
 	<div class="container">
-		<h1>World Clock</h1>
 		<div class="local-time">
 			<h3>Local Time</h3>
-			<span>14:34</span>
-			<p>Vienna, Austria</p>
+			<span class="current-local-time" id="current-local-time">14:34</span>
+			<p class="current-local-position" id="current-local-position">Vienna, Austria</p>
 		</div>
-		<div class="select-city">
-			<select id="cities">
-				<option value="">Select a city..</option>
-				<option value="">New York</option>
-				<option value="">Tokyo</option>
-				<option value="">Seoul</option>
-			</select>
+		<div class="timezone-cities">
+			<div class="select-city">
+				<select id="cities" class="select-bar">
+					<option value="" selected>Select a city..</option>
+					<option value="new york">New York</option>
+					<option value="tokyo">Tokyo</option>
+					<option value="seoul">Seoul</option>
+				</select>
+			</div>
+			<div class="displayed-cities">
+				<ul class="cities">
+					<li class="city">London <span class="hour">9:04:54<small> AM</small></span></li>
+					<li class="city">Sydney <span class="hour">5:04:38<small> AM</small></span></li>
+					<li class="city">Ankara <span class="hour">2:14:14<small> PM</small></span></li>
+				</ul>
+			</div>
 		</div>
-		<div class="displayed-cities">
-			<ul class="cities">
-				<li>London <span>9:04</span><small>AM</small></li>
-				<li>Sydney <span>5:04</span><small>AM</small></li>
-				<li>Ankara <span>2:14</span><small>PM</small></li>
-			</ul>
-		</div>
-		<footer>
-			<p>
-				- Coded by <a href="https://www.linkedin.com/in/louane-voisin-anastasie42" target="_blank">Louane
-					Voisin-Anastasie</a>, is open
-				sourced on <a href="https://github.com/Louhoon/World-Clock" target="_blank">Github</a> and hosted by <a
-					href="https://multiple-timezone-clock.netlify.app/" target="_blank">Netlify</a> -
-			</p>
-		</footer>
 	</div>
+	<footer>
+		<p>
+			- Coded by <a href="https://www.linkedin.com/in/louane-voisin-anastasie42" target="_blank">Louane
+				Voisin-Anastasie</a>, is open
+			sourced on <a href="https://github.com/Louhoon/World-Clock" target="_blank">Github</a> and hosted by <a
+				href="https://multiple-timezone-clock.netlify.app/" target="_blank">Netlify</a> -
+		</p>
+	</footer>
 	<script src="src/index.js"></script>
 </body>
 
