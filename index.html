@@ -25,17 +25,18 @@
 		<div class="timezone-cities">
 			<div class="select-city">
 				<select id="cities" class="select-bar">
-					<option value="" selected>Select a city..</option>
-					<option value="new york">New York</option>
-					<option value="tokyo">Moscow</option>
-					<option value="seoul">Seoul</option>
+					<option value="" selected disabled>Select a city..</option>
+					<option value="America/New_York">New York</option>
+					<option value="Europe/Moscow">Moscow</option>
+					<option value="Asia/Seoul">Seoul</option>
 				</select>
+				<button class="show-timezone-cities-btn" id="update-timezone-cities-btn">🌏</button>
 			</div>
-			<div class="displayed-cities">
+			<div class="displayed-cities" id="update-cities">
 				<ul class="cities">
 					<li class="city" id="london">London<span class="hour" id="london-time"></span></li>
 					<li class="city" id="sydney">Sydney<span class="hour" id="sydney-time"></span></li>
-					<li class="city" id="ankara">Istanbul<span class="hour" id="istanbul-time"></span></li>
+					<li class="city" id="istanbul">Istanbul<span class="hour" id="istanbul-time"></span></li>
 				</ul>
 			</div>
 		</div>

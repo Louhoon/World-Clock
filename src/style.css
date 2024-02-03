@@ -85,7 +85,7 @@ small {
 }
 
 .select-bar {
-	width: 90%;
+	width: 85%;
 	text-align: center;
 	padding: 10px;
 	border-radius: 6px;
@@ -94,7 +94,7 @@ small {
 }
 
 
-.displayed-cities li{
+.cities li{
 	background-color: #F3F3F3;
 	display: flex;
 	justify-content: space-between;
@@ -111,4 +111,19 @@ small {
 .hour {
 	font-size: 28px;
 	font-feature-settings: "tnum";
+}
+
+.show-timezone-cities-btn {
+	padding: 5px;
+	margin-left: 5px;
+	font-size: 18px;
+	border: none;
+	border-radius: 6px;
+	background-color: rgba(252, 176, 69, 0.5);
+	transition: all 150ms ease-in;
+}
+
+.show-timezone-cities-btn:hover {
+	cursor: pointer;
+	background-color: rgba(252, 176, 69, 0.8);
 }
