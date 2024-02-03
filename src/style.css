@@ -68,7 +68,7 @@ small {
 .timezone-cities{
   background-color: #fff;
 	padding-top: 30px;
-	padding-bottom: 50px;
+	padding-bottom: 1px;
 	border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -76,6 +76,7 @@ small {
 .current-local-time {
 	font-size: 78px;
 	color: #fff;
+	font-feature-settings: "tnum";
 }
 
 .current-local-position {
@@ -109,4 +110,5 @@ small {
 
 .hour {
 	font-size: 28px;
+	font-feature-settings: "tnum";
 }

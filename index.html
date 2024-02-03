@@ -9,6 +9,9 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
 		rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.44/moment-timezone-with-data-1970-2030.min.js"></script>
 	<title>World Clock</title>
 </head>
 
@@ -16,7 +19,7 @@
 	<div class="container">
 		<div class="local-time">
 			<h3>Local Time</h3>
-			<span class="current-local-time" id="current-local-time">14:34</span>
+			<span class="current-local-time" id="current-local-time">14:34:45</span>
 			<p class="current-local-position" id="current-local-position">Vienna, Austria</p>
 		</div>
 		<div class="timezone-cities">
@@ -24,15 +27,15 @@
 				<select id="cities" class="select-bar">
 					<option value="" selected>Select a city..</option>
 					<option value="new york">New York</option>
-					<option value="tokyo">Tokyo</option>
+					<option value="tokyo">Moscow</option>
 					<option value="seoul">Seoul</option>
 				</select>
 			</div>
 			<div class="displayed-cities">
 				<ul class="cities">
-					<li class="city">London <span class="hour">9:04:54<small> AM</small></span></li>
-					<li class="city">Sydney <span class="hour">5:04:38<small> AM</small></span></li>
-					<li class="city">Ankara <span class="hour">2:14:14<small> PM</small></span></li>
+					<li class="city" id="london">London<span class="hour" id="london-time"></span></li>
+					<li class="city" id="sydney">Sydney<span class="hour" id="sydney-time"></span></li>
+					<li class="city" id="ankara">Istanbul<span class="hour" id="istanbul-time"></span></li>
 				</ul>
 			</div>
 		</div>
