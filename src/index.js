@@ -1,4 +1,15 @@
 function updateTime() {
+  //local time
+  let currentLocalTimeElement = document.querySelector("#current-local-time");
+  let currentLocalpositionElement = document.querySelector(
+    "#current-local-position"
+  );
+  let currentTime = moment.tz.guess();
+  let localTime = moment().tz(currentTime);
+
+  currentLocalTimeElement.innerHTML = `${localTime.format("HH:mm:ss")}`;
+  currentLocalpositionElement.innerHTML = currentTime.replace("/", ", ");
+
   //london
   let londonElement = document.querySelector("#london");
   if (londonElement) {
@@ -47,16 +58,15 @@ function updateCity(event) {
 						</ul>`;
 }
 
-
 function displayHomeCities() {
-	let homecitiesElement = document.querySelector("#update-cities");
-	homecitiesElement.innerHTML = `<div class="displayed-cities" id="update-cities">
+  let homecitiesElement = document.querySelector("#update-cities");
+  homecitiesElement.innerHTML = `<div class="displayed-cities" id="update-cities">
 				<ul class="cities">
 					<li class="city" id="london">London<span class="hour" id="london-time"></span></li>
 					<li class="city" id="sydney">Sydney<span class="hour" id="sydney-time"></span></li>
 					<li class="city" id="istanbul">Istanbul<span class="hour" id="istanbul-time"></span></li>
 				</ul>
-			</div>`
+			</div>`;
 }
 
 updateTime();
